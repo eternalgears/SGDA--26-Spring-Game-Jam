@@ -9,6 +9,11 @@
     "I prepare a fresh cleaning solution and start wiping away the android excess on the operating table."
     "IPHIS is a special case, being an older nurse model. I can treat her with the utmost care, and she'll still find a way to bleed out."
     # possible code mechanic here where the player cleans the blood off the table?
+    label clean1:
+        #clean mechanic
+        jump contAct1
+
+label contAct1:
     "...What a nuisance. At least there is an endless amount of android blood in the lab that I can restore her with."
     "After I'm done wiping, I change my gloves, spray with a different solution, and wipe again."
 
@@ -19,7 +24,7 @@
     "An automated response. I have met newer android models that responded to praise, but IPHIS's response is all the more satisfactory compared to generated glee."
     i "Run me a status report."
     p "{cps=100}Processors are stable."
-    p "{cps=100}Memory used is at 40%."
+    p "{cps=100}Memory used is at 40\%."
     p "{cps=100}Cooling systems are stable."
     p "{cps=100}All components are stable."
     i "How about the bionic replacements?"
@@ -43,6 +48,6 @@
     "For instance, the #2aorta functions similarly to a human's aortic value. Due to the nature of our experiments, IPHIS's #2aorta had been spent (thus leaking every now and then), so I had to replace it with a bionic."
     "...IPHIS's ever growing refusals to my questions have been increasing as of late. It almost borders on breaking the 2nd Law, had it not followed her usual logic."
     "This may be because during experiment #30 and experiment #31, I had made slight changes to her controller core by replacing parts of it with limbic and prefrontal bionics."
-    "At those times, a persistent bug, possibly existing from her antique design, was taking up 10% of her memory. A factory reset was in order for the affected areas, but even that was creating a runtime error."
+    "At those times, a persistent bug, possibly existing from her antique design, was taking up 10\% of her memory. A factory reset was in order for the affected areas, but even that was creating a runtime error."
     "I had to do what I had to do. It will not affect the project's success rate."
     return

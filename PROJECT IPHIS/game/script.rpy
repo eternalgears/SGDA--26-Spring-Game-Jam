@@ -3,20 +3,73 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define p = Character(None, image = "iphis", what_color="#5ce1e6", kind = bubble, retain = True)
-define i = Character(None, image = "ianthe", what_color="#FFFFFF", kind = bubble, retain = True)
+# VOICE BLEEPS
+init python:
+    # voice bleep audio channel
+    renpy.music.register_channel("bleeps", mixer= "sfx", loop=True)
+
+    # function for playing voice bleeps          
+    def voice_play(on=False, char=1):
+        if on:
+            if char==1:
+                renpy.sound.play("audio/ianthe.wav", channel="bleeps", loop=True)
+            if char==2:
+                renpy.sound.play("audio/iphis.wav", channel="bleeps", loop=True)
+            if char==3:
+                renpy.sound.play("audio/type.wav", channel="bleeps", loop=True)
+        else:
+            renpy.sound.stop(channel="bleeps")
+
+    def ianthe_sound(event, interact=True, **kwargs):
+        if not interact:
+            return
+
+        if event == "show" or event == "begin":
+            voice_play(True, 1)
+        elif event == "slow_done" or event == "end":
+            voice_play(False, 1)
+
+    def iphis_sound(event, interact=True, **kwargs):
+        if not interact:
+            return
+
+        if event == "show":
+            #renpy.sound.play("audio/kuma.wav", loop=True)
+            voice_play(True, 2)
+        elif event == "slow_done" or event == "end":
+            voice_play(False, 2)
+    
+    def type_sound(event, interact=True, **kwargs):
+        if not interact:
+            return
+
+        if event == "show" or event == "begin":
+            voice_play(True, 3)
+        elif event == "slow_done" or event == "end":
+            voice_play(False, 3)
+
+
+
+# CHARACTERS
+define p = Character(None, image = "iphis", what_color="#5ce1e6", kind = bubble, retain = True, callback = iphis_sound)
+define i = Character(None, image = "ianthe", what_color="#FFFFFF", kind = bubble, retain = True, callback = ianthe_sound)
 # n is to distinguish how one bubble looks like the standard adv dialogue box
 define n = Character(None, image = "ianthe", what_color="#FFFFFF", kind = bubble, retain = True)
+# typing in the logs
+define nn = Character(None, callback = type_sound)
 
+# defaults
 default preferences.text_cps = 34
 
 
+# image definitions
 image white = "#FFFFFF"
 
 #image side ianthe smile:
     #"images/ianthe smile.png"
     #zoom 0.5
 
+# TRANSFORMS
 transform center1:
     xalign 0.5
     yalign 1.5
@@ -45,9 +98,9 @@ label start:
         zoom 1.35
     ### ACT 1 ##
 
-    "{cps=45}\"cout << \"|| PROJECT IPHIS ||\" << ‘\n' << \"log 35x\";{nw}{/cps}"
-    "|| PROJECT IPHIS ||\nlog 35x"
-    "logFile << \"IPHIS's #2aorta has successfully been replaced with a parallel aortic valve bionic.\";"
+    nn "{cps=45}\"cout << \"|| PROJECT IPHIS ||\" << ‘\n' << \"log 35x\";{nw}{/cps}"
+    "{cps=100}|| PROJECT IPHIS ||\nlog 35x{/cps}"
+    nn "logFile << \"IPHIS's #2aorta has successfully been replaced with a parallel aortic valve bionic.\";"
     
     jump act1
 
