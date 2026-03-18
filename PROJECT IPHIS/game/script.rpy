@@ -5,6 +5,7 @@
 
 define p = Character(None, image = "iphis", what_color="#5ce1e6", kind = bubble, retain = True)
 define i = Character(None, image = "ianthe", what_color="#FFFFFF", kind = bubble, retain = True)
+# n is to distinguish how one bubble looks like the standard adv dialogue box
 define n = Character(None, image = "ianthe", what_color="#FFFFFF", kind = bubble, retain = True)
 
 default preferences.text_cps = 34
@@ -42,25 +43,13 @@ label start:
     with Pixellate(1.5, 5.0)
     scene bg lab at center2, AnimatedAberate, VHS:
         zoom 1.35
-    play music "audio/act 1 draft.mp3"
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    ### ACT 1 ##
 
-    show iphis neutral at center1, AnimatedAberate, VHS:
-        zoom 0.56
-
-    p "{cps=90}Processors are stable."
-    p "{cps=90}Memory used is at 40\%."
-    p "{cps=90}Cooling systems are stable."
-    p "{cps=90}All components are stable."
-    show ianthe smile at ianthe1, AnimatedAberate, VHS:
-        zoom 0.9
-
-    n "My fingers dig through the wires to find the empty sector. Once I’ve located the area, I grab the parallel bionic and place it in the null."
-    p "{cps=45}...It is not within my bandwidth to answer that question."
+    "{cps=45}\"cout << \"|| PROJECT IPHIS ||\" << ‘\n' << \"log 35x\";{nw}{/cps}"
+    "|| PROJECT IPHIS ||\nlog 35x"
+    "logFile << \"IPHIS's #2aorta has successfully been replaced with a parallel aortic valve bionic.\";"
+    
+    jump act1
 
 
     # This ends the game.
-
-    return
