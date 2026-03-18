@@ -1,0 +1,55 @@
+{
+    "start_0b29a397": {
+        "area": [
+            1040,
+            765,
+            560,
+            135
+        ],
+        "properties": "thought"
+    },
+    "start_0d2de0ec": {
+        "area": [
+            80,
+            765,
+            800,
+            270
+        ],
+        "properties": "thought"
+    },
+    "start_68b590f2": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "start_8e2915c9": {
+        "area": [
+            1040,
+            135,
+            560,
+            135
+        ],
+        "properties": "thought"
+    },
+    "start_afce46b9": {
+        "area": [
+            1200,
+            180,
+            480,
+            225
+        ]
+    },
+    "start_eb23a5e0": {
+        "area": [
+            320,
+            450,
+            560,
+            135
+        ],
+        "properties": "thought"
+    }
+}
