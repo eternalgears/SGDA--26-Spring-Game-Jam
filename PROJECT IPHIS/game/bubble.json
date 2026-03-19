@@ -1,4 +1,401 @@
 {
+    "act1_03bbd475": {
+        "area": [
+            1360,
+            855,
+            480,
+            180
+        ]
+    },
+    "act1_476d6f35": {
+        "area": [
+            1440,
+            180,
+            400,
+            720
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "act1_644f875b": {
+        "area": [
+            1440,
+            225,
+            400,
+            630
+        ],
+        "properties": "thought"
+    },
+    "act1_767a9f49": {
+        "area": [
+            80,
+            720,
+            720,
+            270
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "act1_9347333a": {
+        "area": [
+            1120,
+            180,
+            640,
+            225
+        ],
+        "properties": "thought"
+    },
+    "act1_9bae6fc8": {
+        "area": [
+            1200,
+            90,
+            640,
+            225
+        ],
+        "properties": "thought"
+    },
+    "act1_cfa4f26a": {
+        "area": [
+            240,
+            720,
+            480,
+            225
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "act1_db694a07": {
+        "area": [
+            80,
+            225,
+            400,
+            630
+        ],
+        "properties": "thought"
+    },
+    "act1_e2ea8eed": {
+        "area": [
+            1280,
+            855,
+            560,
+            135
+        ]
+    },
+    "contAct1_0337a02a": {
+        "area": [
+            1120,
+            225,
+            480,
+            180
+        ]
+    },
+    "contAct1_0ac7f9e5": {
+        "area": [
+            1120,
+            270,
+            480,
+            180
+        ]
+    },
+    "contAct1_0b96cccf": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_1b0925ef": {
+        "area": [
+            1120,
+            495,
+            480,
+            135
+        ]
+    },
+    "contAct1_28b3aa8a": {
+        "area": [
+            560,
+            225,
+            640,
+            180
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "contAct1_2daea767": {
+        "properties": "thought"
+    },
+    "contAct1_2dc4098d": {
+        "clear_retain": true
+    },
+    "contAct1_35ac731c": {
+        "area": [
+            1040,
+            180,
+            560,
+            135
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "contAct1_3619eb5a": {
+        "area": [
+            1200,
+            45,
+            640,
+            315
+        ],
+        "properties": "thought"
+    },
+    "contAct1_38a82f15": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_3a1e6129": {
+        "area": [
+            1200,
+            360,
+            640,
+            315
+        ],
+        "properties": "thought"
+    },
+    "contAct1_3f004a5a": {
+        "area": [
+            160,
+            360,
+            560,
+            270
+        ],
+        "clear_retain": false
+    },
+    "contAct1_427b47b4": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_441766c9": {
+        "area": [
+            1200,
+            225,
+            480,
+            315
+        ],
+        "clear_retain": false
+    },
+    "contAct1_48544792": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_49b2f92d": {
+        "area": [
+            1200,
+            135,
+            400,
+            180
+        ],
+        "clear_retain": false
+    },
+    "contAct1_4e996efa": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_58498ceb": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_5f8b3ee8": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_66af0c38": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_68f7f762": {
+        "area": [
+            800,
+            450,
+            640,
+            135
+        ],
+        "properties": "thought"
+    },
+    "contAct1_80ce836a": {
+        "area": [
+            1200,
+            180,
+            480,
+            180
+        ]
+    },
+    "contAct1_85e909d3": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "contAct1_8a2bb567": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_9c8177c8": {
+        "area": [
+            1040,
+            135,
+            560,
+            135
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "contAct1_9d0b4e9d": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "contAct1_a1fdacea": {
+        "area": [
+            1200,
+            315,
+            640,
+            450
+        ],
+        "properties": "thought"
+    },
+    "contAct1_a8d1cf6d": {
+        "area": [
+            1360,
+            180,
+            400,
+            720
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "contAct1_ab518404": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_c866328e": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_da1f6873": {
+        "area": [
+            1040,
+            540,
+            560,
+            135
+        ],
+        "properties": "thought"
+    },
+    "contAct1_daba055e": {
+        "clear_retain": true
+    },
+    "contAct1_dcbd26b7": {
+        "area": [
+            400,
+            315,
+            480,
+            135
+        ],
+        "properties": "thought"
+    },
+    "contAct1_e2ea8eed": {
+        "area": [
+            320,
+            810,
+            640,
+            135
+        ]
+    },
+    "contAct1_e64cd152": {
+        "area": [
+            80,
+            720,
+            720,
+            315
+        ],
+        "properties": "top_left"
+    },
+    "contAct1_e9cefce9": {
+        "area": [
+            320,
+            765,
+            560,
+            135
+        ]
+    },
+    "contAct1_f23f31d7": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
     "start_0b29a397": {
         "area": [
             1040,

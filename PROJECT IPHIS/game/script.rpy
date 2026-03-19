@@ -64,6 +64,7 @@ default preferences.text_cps = 34
 
 # image definitions
 image white = "#FFFFFF"
+image black = "#000000"
 
 #image side ianthe smile:
     #"images/ianthe smile.png"
