@@ -7,12 +7,30 @@
             180
         ]
     },
+    "act1_0d418418": {
+        "area": [
+            160,
+            405,
+            480,
+            225
+        ],
+        "properties": "thought"
+    },
+    "act1_31a45741": {
+        "area": [
+            80,
+            720,
+            480,
+            225
+        ],
+        "properties": "thought"
+    },
     "act1_476d6f35": {
         "area": [
-            1440,
+            80,
             180,
             400,
-            720
+            360
         ],
         "clear_retain": true,
         "properties": "thought"
@@ -26,6 +44,15 @@
         ],
         "properties": "thought"
     },
+    "act1_6e1170fa": {
+        "area": [
+            80,
+            135,
+            480,
+            180
+        ],
+        "properties": "thought"
+    },
     "act1_767a9f49": {
         "area": [
             80,
@@ -36,11 +63,30 @@
         "clear_retain": true,
         "properties": "thought"
     },
+    "act1_78cf7850": {
+        "area": [
+            1280,
+            810,
+            480,
+            135
+        ],
+        "properties": "thought"
+    },
+    "act1_8b0c2c12": {
+        "area": [
+            1280,
+            675,
+            560,
+            270
+        ],
+        "clear_retain": false,
+        "properties": "thought"
+    },
     "act1_9347333a": {
         "area": [
-            1120,
-            180,
-            640,
+            1280,
+            675,
+            480,
             225
         ],
         "properties": "thought"
@@ -54,12 +100,22 @@
         ],
         "properties": "thought"
     },
+    "act1_adcc9508": {
+        "area": [
+            80,
+            360,
+            480,
+            360
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
     "act1_cfa4f26a": {
         "area": [
-            240,
-            720,
-            480,
-            225
+            880,
+            270,
+            400,
+            180
         ],
         "clear_retain": true,
         "properties": "thought"
@@ -114,10 +170,19 @@
             135
         ]
     },
+    "contAct1_1b5dc983": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
     "contAct1_28b3aa8a": {
         "area": [
             560,
-            225,
+            180,
             640,
             180
         ],
@@ -129,6 +194,15 @@
     },
     "contAct1_2dc4098d": {
         "clear_retain": true
+    },
+    "contAct1_335f5038": {
+        "area": [
+            480,
+            720,
+            560,
+            180
+        ],
+        "properties": "thought"
     },
     "contAct1_35ac731c": {
         "area": [
@@ -194,6 +268,15 @@
         ],
         "clear_retain": false
     },
+    "contAct1_466d9e78": {
+        "area": [
+            800,
+            405,
+            720,
+            270
+        ],
+        "properties": "thought"
+    },
     "contAct1_48544792": {
         "area": [
             560,
@@ -231,6 +314,15 @@
         "clear_retain": true
     },
     "contAct1_5f8b3ee8": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_60fbfe20": {
         "area": [
             560,
             720,
@@ -281,6 +373,24 @@
             720,
             800,
             270
+        ],
+        "clear_retain": true
+    },
+    "contAct1_90de2e90": {
+        "area": [
+            480,
+            720,
+            560,
+            180
+        ],
+        "properties": "thought"
+    },
+    "contAct1_98f439d5": {
+        "area": [
+            560,
+            450,
+            800,
+            135
         ],
         "clear_retain": true
     },
@@ -352,6 +462,15 @@
     },
     "contAct1_daba055e": {
         "clear_retain": true
+    },
+    "contAct1_dc5eb995": {
+        "area": [
+            880,
+            450,
+            640,
+            225
+        ],
+        "properties": "thought"
     },
     "contAct1_dcbd26b7": {
         "area": [

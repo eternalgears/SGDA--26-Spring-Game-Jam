@@ -58,6 +58,16 @@ define n = Character(None, image = "ianthe", what_color="#FFFFFF", kind = bubble
 # typing in the logs
 define nn = Character(None, callback = type_sound)
 
+# center text
+define c = Character(None,
+    kind=nvl,
+    window_background=None,
+    what_style="centered_text",
+    what_color="#fff",
+    who_outlines=[ (2, "#000000") ],
+    what_outlines=[ (2, "#000000") ],
+    window_style="centered_window")
+
 # defaults
 default preferences.text_cps = 34
 
