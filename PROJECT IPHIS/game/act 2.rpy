@@ -33,7 +33,7 @@
         alpha 0.8
     p "Dr. Ianthe?"
     # v punch?
-    play music "audio/act 2 demo.mp3"
+    play music "audio/act 2 final mix.mp3" fadein 1.0
     with vpunch
     show black:
         alpha 0.3
@@ -147,7 +147,7 @@
     i scary "..."
     i "You.."
     play sound "audio/error.wav"
-    play music "<volume 0.8>act 2 demo.mp3" fadein 1.0
+    play music "<volume 0.8>act 2 final mix.mp3" fadein 1.0
     p scared "{cps=90}Urk...!{/cps}" with vpunch
     n "I tugged on her cannula wire."
     n "A little bit of blood seeps out, but not too much to where she could be put in critical condition."

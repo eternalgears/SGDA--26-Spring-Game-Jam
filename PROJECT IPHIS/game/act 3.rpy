@@ -1,24 +1,42 @@
 ﻿label act3:
 # act 3 narrative here
+    nvl clear
     c "{b}ACT 3:{/b} PROJECT IPHIS\n{w}\"Human and Emotion\""
     play music "<volume 0.2>audio/whirr.wav" fadein 7.0
-    scene bg lab at center2, AnimatedAberate, VHS with fade:
+    scene bg lab at center2, AnimatedAberate, VHS:
         zoom 1.35
+    show black:
+        alpha 0.5
+    with fade
     n "IPHIS laid flat on the table once more. This time, the harsh light focused on her cranium."
     n "It would come that I would eventually review her controller core again, since it is a vital key to the final step of this project."
+    show ianthe bored at ianthe1, AnimatedAberate, VHS
     i "Iphis, shut your pain sensors off."
     p "...Understood."
     n "There isn't a visual indication of the sensors turning off, but I trust her confirmation."
     n "{i}For that matter, if she was human, I would've given her anesthesia, but that's besides the point."
-    "I opened a latch in her forehead using a small screwdriver. Making sure the cannula doesn't break and spill everywhere, I turn the connection off so that the blood through her brain rests."
+    n "I opened a latch in her forehead using a small screwdriver. Making sure the cannula doesn't break and spill everywhere, I turn the connection off so that the blood through her brain rests."
     # controller core (which looks similar to the human brain but with machinery) is visible
-    "{cps=100}<ERROR !! ALTERED STATE OF CONTROLLER CORE !! Report this bug to the database?>"
-    "It must be referring to the bionics being swapped in. These error messages don't take place whenever I put in bionics in other parts of her body, but for some reason, they only show up in the controller core."
-    "I press the red button to not report the ‘bug.'"
-
-    "{cps=100}<THOUGHT PATTERNS IRREGULAR !!>"
-    "{cps=100}<SYSTEM UNABLE TO PROCESS CORE DATABASE INFORMATION !!>"
-
+    play sound "audio/error.wav"
+    n "{color=#5ce1e6}{cps=100}<ERROR !! ALTERED STATE OF CONTROLLER CORE !! Report this bug to the database?>{/color}{/cps}" with hpunch
+    n "It must be referring to the limbic and prefrontal bionics being swapped in."
+    n "These error messages don't take place whenever I put in bionics in other parts of her body, but for some reason, they only show up in the controller core."
+    play sound "audio/button.wav"
+    n "I press the red button to not report the 'bug.'"
+    hide ianthe
+    play sound "audio/error.wav"
+    n "{color=#5ce1e6}{cps=100}<THOUGHT PATTERNS IRREGULAR !!>{/cps}{/color}" with hpunch
+    play sound "audio/error.wav"
+    n "{color=#5ce1e6}{cps=100}<SYSTEM UNABLE TO PROCESS CORE DATABASE INFORMATION !!>{/cps}{/color}" with hpunch
+    show ianthe bored at ianthe1, AnimatedAberate, VHS
+    i "Huh?"
+    show black:
+        alpha 0.8
+    play sound "audio/error.wav"
+    hide ianthe
+    n "{color=#5ce1e6}{cps=100}<UNABLE TO FIND CONTROLLER CORE CRITICAL POINTS>{/cps}{/color}"
+    play sound "audio/selecterror.wav"
+    n "{color=#5ce1e6}{cps=100}<SHUTTING DOWN MODEL TASK PROCESSES>{/cps}{/color}"
 
     #no log until end
 

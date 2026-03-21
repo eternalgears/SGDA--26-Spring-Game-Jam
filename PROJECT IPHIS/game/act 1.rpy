@@ -2,7 +2,7 @@
     scene black with Dissolve(1.0)
     n "Click to continue. >>"
     pause
-    play music "audio/act 1 draft.mp3"
+    play music "audio/act 1 final mix.mp3"
     #cg here
     scene cg heart at AnimatedAberate, VHS
     with Dissolve(1.0)

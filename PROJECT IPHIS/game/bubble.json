@@ -1002,6 +1002,208 @@
         ],
         "properties": "thought"
     },
+    "act3_01bffa13": {
+        "area": [
+            960,
+            495,
+            560,
+            270
+        ]
+    },
+    "act3_11973e31": {
+        "properties": "thought"
+    },
+    "act3_14ff0a8f": {
+        "area": [
+            560,
+            450,
+            400,
+            135
+        ],
+        "properties": "thought"
+    },
+    "act3_25c78c76": {
+        "area": [
+            560,
+            450,
+            400,
+            180
+        ]
+    },
+    "act3_2acc99b3": {
+        "area": [
+            1120,
+            360,
+            400,
+            135
+        ]
+    },
+    "act3_2eaa9716": {
+        "area": [
+            400,
+            315,
+            480,
+            180
+        ],
+        "clear_retain": true
+    },
+    "act3_31f1bab9": {
+        "area": [
+            880,
+            540,
+            560,
+            270
+        ]
+    },
+    "act3_39707bd2": {
+        "area": [
+            560,
+            360,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "act3_5f77778b": {
+        "area": [
+            400,
+            225,
+            560,
+            225
+        ]
+    },
+    "act3_66d8a807": {
+        "area": [
+            160,
+            180,
+            560,
+            180
+        ],
+        "properties": "thought"
+    },
+    "act3_6f4d91db": {
+        "area": [
+            320,
+            270,
+            480,
+            180
+        ]
+    },
+    "act3_7489bc30": {
+        "area": [
+            320,
+            180,
+            640,
+            180
+        ]
+    },
+    "act3_7ecd61bc": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "act3_8262a84b": {
+        "area": [
+            560,
+            315,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "act3_8613b7dd": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "act3_9cdb3709": {
+        "area": [
+            320,
+            225,
+            560,
+            225
+        ]
+    },
+    "act3_b41ae849": {
+        "area": [
+            320,
+            270,
+            560,
+            180
+        ]
+    },
+    "act3_c177bcfe": {
+        "area": [
+            160,
+            360,
+            560,
+            225
+        ],
+        "properties": "thought"
+    },
+    "act3_c96c8f94": {
+        "area": [
+            400,
+            225,
+            560,
+            225
+        ],
+        "clear_retain": true
+    },
+    "act3_d3127744": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "act3_d32b5224": {
+        "area": [
+            1200,
+            270,
+            640,
+            360
+        ],
+        "properties": "thought"
+    },
+    "act3_daa3fe06": {
+        "area": [
+            80,
+            90,
+            560,
+            225
+        ],
+        "properties": "thought"
+    },
+    "act3_e0ec9666": {
+        "area": [
+            80,
+            360,
+            560,
+            315
+        ],
+        "properties": "thought"
+    },
+    "act3_e2df3f95": {
+        "area": [
+            400,
+            270,
+            560,
+            225
+        ],
+        "clear_retain": true
+    },
     "contAct1_0337a02a": {
         "area": [
             1120,
