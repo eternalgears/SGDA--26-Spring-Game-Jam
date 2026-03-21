@@ -704,7 +704,7 @@ screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_("empty slot")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):
@@ -742,11 +742,11 @@ screen file_slots(title):
 
                 if config.has_sync:
                     if CurrentScreenName() == "save":
-                        textbutton _("UPLOAD SYNC"):
+                        textbutton _("Upload Sync"):
                             action UploadSync()
                             xalign 0.5
                     else:
-                        textbutton _("DOWNLOAD SYNC"):
+                        textbutton _("Download Sync"):
                             action DownloadSync()
                             xalign 0.5
 
