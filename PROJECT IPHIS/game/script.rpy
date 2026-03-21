@@ -65,6 +65,12 @@ default preferences.text_cps = 34
 # image definitions
 image white = "#FFFFFF"
 
+image mouse arrow:
+    "images/arrow2.png"
+
+# define all cursors
+define config.mouse_displayable = MouseDisplayable("images/arrow2.png", 0, 0)
+
 #image side ianthe smile:
     #"images/ianthe smile.png"
     #zoom 0.5

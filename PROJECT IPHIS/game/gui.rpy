@@ -28,14 +28,14 @@ define config.check_conflicting_properties = True
 define gui.accent_color = '#0099cc'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#ffffff'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
 define gui.idle_small_color = '#5ce1e6'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#66c1e0'
+define gui.hover_color = '#5ce1e6'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
@@ -63,7 +63,7 @@ define gui.text_font = "MS Gothic Regular.ttf"
 define gui.name_text_font = "MS Gothic Regular.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "MS Gothic Regular.ttf"
+define gui.interface_text_font = "JetBrainsMono-Regular.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33
@@ -72,10 +72,10 @@ define gui.text_size = 33
 define gui.name_text_size = 45
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 40#33
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 36
+define gui.label_text_size = 42#36
 
 ## The size of text on the notify screen.
 define gui.notify_text_size = 24
@@ -93,14 +93,14 @@ define gui.game_menu_background = "gui/game_menu.png"
 
 ## Dialogue ####################################################################
 ##
-## These variables control how dialogue is displayed on the screen one line at
-## a time.
+## These variables control how dialogue is displayed on the screen one line at a
+## time.
 
 ## The height of the textbox containing dialogue.
 define gui.textbox_height = 278
 
-## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5
-## is center, and 1.0 is the bottom.
+## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
+## center, and 1.0 is the bottom.
 define gui.textbox_yalign = 1.0
 
 
@@ -113,8 +113,8 @@ define gui.name_ypos = 0
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
 define gui.name_xalign = 0.0
 
-## The width, height, and borders of the box containing the character's name,
-## or None to automatically size it.
+## The width, height, and borders of the box containing the character's name, or
+## None to automatically size it.
 define gui.namebox_width = None
 define gui.namebox_height = None
 
@@ -143,8 +143,8 @@ define gui.dialogue_text_xalign = 0.0
 
 ## Buttons #####################################################################
 ##
-## These variables, along with the image files in gui/button, control aspects
-## of how buttons are displayed.
+## These variables, along with the image files in gui/button, control aspects of
+## how buttons are displayed.
 
 ## The width and height of a button, in pixels. If None, Ren'Py computes a size.
 define gui.button_width = None
@@ -169,8 +169,8 @@ define gui.button_text_hover_color = gui.hover_color
 define gui.button_text_selected_color = gui.selected_color
 define gui.button_text_insensitive_color = gui.insensitive_color
 
-## The horizontal alignment of the button text. (0.0 is left, 0.5 is center,
-## 1.0 is right).
+## The horizontal alignment of the button text. (0.0 is left, 0.5 is center, 1.0
+## is right).
 define gui.button_text_xalign = 0.0
 
 
@@ -193,9 +193,9 @@ define gui.quick_button_text_size = 21
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 
-## You can also add your own customizations, by adding properly-named
-## variables. For example, you can uncomment the following line to set the width
-## of a navigation button.
+## You can also add your own customizations, by adding properly-named variables.
+## For example, you can uncomment the following line to set the width of a
+## navigation button.
 
 # define gui.navigation_button_width = 250
 
@@ -243,11 +243,11 @@ define gui.file_slot_rows = 2
 
 ## Positioning and Spacing #####################################################
 ##
-## These variables control the positioning and spacing of various user
-## interface elements.
+## These variables control the positioning and spacing of various user interface
+## elements.
 
-## The position of the left side of the navigation buttons, relative to the
-## left side of the screen.
+## The position of the left side of the navigation buttons, relative to the left
+## side of the screen.
 define gui.navigation_xpos = 60
 
 ## The vertical position of the skip indicator.
@@ -259,7 +259,10 @@ define gui.notify_ypos = 68
 ## The spacing between menu choices.
 define gui.choice_spacing = 33
 
-## Buttons in the navigation section of the main and game menus.
+## Buttons in the navigation section of the main menu.
+define gui.main_menu_navigation_spacing = 12
+
+## Buttons in the navigation section of the game menu.
 define gui.navigation_spacing = 6
 
 ## Controls the amount of spacing between preferences.
@@ -306,8 +309,8 @@ define gui.frame_tile = False
 ## The default GUI only uses sliders and vertical scrollbars. All of the other
 ## bars are only used in creator-written screens.
 
-## The height of horizontal bars, scrollbars, and sliders. The width of
-## vertical bars, scrollbars, and sliders.
+## The height of horizontal bars, scrollbars, and sliders. The width of vertical
+## bars, scrollbars, and sliders.
 define gui.bar_size = 38
 define gui.scrollbar_size = 18
 define gui.slider_size = 38
@@ -367,16 +370,16 @@ define gui.history_text_xalign = 0.0
 ## The borders of the background of the NVL-mode background window.
 define gui.nvl_borders = Borders(0, 15, 0, 30)
 
-## The maximum number of NVL-mode entries Ren'Py will display. When more
-## entries than this are to be show, the oldest entry will be removed.
+## The maximum number of NVL-mode entries Ren'Py will display. When more entries
+## than this are to be show, the oldest entry will be removed.
 define gui.nvl_list_length = 6
 
 ## The height of an NVL-mode entry. Set this to None to have the entries
 ## dynamically adjust height.
 define gui.nvl_height = 173
 
-## The spacing between NVL-mode entries when gui.nvl_height is None, and
-## between NVL-mode entries and an NVL-mode menu.
+## The spacing between NVL-mode entries when gui.nvl_height is None, and between
+## NVL-mode entries and an NVL-mode menu.
 define gui.nvl_spacing = 15
 
 ## The position, width, and alignment of the label giving the name of the
@@ -403,7 +406,6 @@ define gui.nvl_thought_xalign = 0.0
 define gui.nvl_button_xpos = 675
 define gui.nvl_button_xalign = 0.0
 
-
 ## Localization ################################################################
 
 ## This controls where a line break is permitted. The default is suitable
@@ -419,8 +421,8 @@ define gui.language = "unicode"
 
 init python:
 
-    ## This increases the size of the quick buttons to make them easier to
-    ## touch on tablets and phones.
+    ## This increases the size of the quick buttons to make them easier to touch
+    ## on tablets and phones.
     @gui.variant
     def touch():
 
