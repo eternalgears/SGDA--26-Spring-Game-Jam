@@ -76,6 +76,7 @@ default preferences.text_cps = 34
 # image definitions
 image white = "#FFFFFF"
 image black = "#000000"
+image cyan = "#96fbff"
 
 #image side ianthe smile:
     #"images/ianthe smile.png"
@@ -108,7 +109,7 @@ label start:
     with Pixellate(1.5, 5.0)
     scene black
     ### ACT 1 ##
-    c "{b}ACT 1:{/b} PROJECT IPHIS\n{w}\"Bionic and organ.\""
+    c "{b}ACT 1:{/b} PROJECT IPHIS\n{w}\"Bionic and Organ.\""
     scene bg clean at AnimatedAberate, VHS:
         zoom 1.2
     nn "{cps=45}\"cout << \"|| PROJECT IPHIS ||\" << ‘\n' << \"log 35x\";{nw}{/cps}"

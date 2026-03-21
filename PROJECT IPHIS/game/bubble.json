@@ -200,7 +200,32 @@
             90
         ]
     },
+    "act2_26846c81": {
+        "area": [
+            400,
+            495,
+            320,
+            90
+        ]
+    },
     "act2_28d20133": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "act2_2cf86396": {
+        "area": [
+            560,
+            135,
+            240,
+            90
+        ]
+    },
+    "act2_2ea64ac1": {
         "area": [
             560,
             720,
@@ -219,12 +244,23 @@
         "clear_retain": true,
         "properties": "thought"
     },
+    "act2_300701d2": {
+        "clear_retain": true
+    },
     "act2_31da0a76": {
         "area": [
             1120,
             630,
             480,
             180
+        ]
+    },
+    "act2_31dfb715": {
+        "area": [
+            80,
+            360,
+            560,
+            225
         ]
     },
     "act2_32b959cc": {
@@ -254,6 +290,14 @@
         ],
         "properties": "thought"
     },
+    "act2_39de86d1": {
+        "area": [
+            1040,
+            675,
+            400,
+            90
+        ]
+    },
     "act2_3b88c420": {
         "area": [
             560,
@@ -278,6 +322,41 @@
             480,
             180
         ]
+    },
+    "act2_4652569c": {
+        "area": [
+            480,
+            675,
+            960,
+            360
+        ]
+    },
+    "act2_47762750": {
+        "area": [
+            1200,
+            405,
+            480,
+            135
+        ]
+    },
+    "act2_489fc360": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "act2_4a1b4f91": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
     },
     "act2_4cb01135": {
         "area": [
@@ -338,10 +417,51 @@
             270
         ]
     },
+    "act2_6b3d4b27": {
+        "area": [
+            560,
+            675,
+            800,
+            360
+        ]
+    },
     "act2_6ddeef49": {
         "area": [
             480,
             450,
+            240,
+            90
+        ]
+    },
+    "act2_70425756": {
+        "area": [
+            320,
+            225,
+            480,
+            135
+        ]
+    },
+    "act2_70b7f187": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "act2_72e469f0": {
+        "area": [
+            720,
+            315,
+            240,
+            90
+        ]
+    },
+    "act2_75885c46": {
+        "area": [
+            1120,
+            675,
             240,
             90
         ]
@@ -371,6 +491,15 @@
             180
         ]
     },
+    "act2_7a6c18c7": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
     "act2_7d1aceb6": {
         "area": [
             320,
@@ -378,6 +507,15 @@
             400,
             90
         ]
+    },
+    "act2_7dd37177": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
     },
     "act2_85607962": {
         "area": [
@@ -396,6 +534,23 @@
             400,
             180
         ]
+    },
+    "act2_885df162": {
+        "area": [
+            1200,
+            225,
+            240,
+            90
+        ]
+    },
+    "act2_8988a03a": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "properties": "thought"
     },
     "act2_8bea4955": {
         "area": [
@@ -422,6 +577,14 @@
             180
         ]
     },
+    "act2_8d24e1bc": {
+        "area": [
+            80,
+            315,
+            640,
+            225
+        ]
+    },
     "act2_8e8addf4": {
         "area": [
             80,
@@ -437,6 +600,15 @@
             240,
             90
         ]
+    },
+    "act2_a137d7a5": {
+        "area": [
+            1200,
+            270,
+            480,
+            180
+        ],
+        "properties": "thought"
     },
     "act2_a17dcab8": {
         "area": [
@@ -463,6 +635,15 @@
             270
         ],
         "properties": "thought"
+    },
+    "act2_aaaff56a": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
     },
     "act2_ae65deff": {
         "area": [
@@ -526,6 +707,14 @@
         ],
         "clear_retain": true
     },
+    "act2_c7d611b7": {
+        "area": [
+            1200,
+            45,
+            640,
+            225
+        ]
+    },
     "act2_ca968538": {
         "area": [
             560,
@@ -534,6 +723,15 @@
             270
         ],
         "clear_retain": true,
+        "properties": "thought"
+    },
+    "act2_cad00443": {
+        "area": [
+            1200,
+            270,
+            400,
+            270
+        ],
         "properties": "thought"
     },
     "act2_cdd3a8b8": {
@@ -545,6 +743,15 @@
         ],
         "properties": "thought"
     },
+    "act2_cddcd06a": {
+        "area": [
+            160,
+            405,
+            560,
+            225
+        ],
+        "properties": "thought"
+    },
     "act2_cde92cc7": {
         "area": [
             560,
@@ -552,6 +759,16 @@
             240,
             90
         ]
+    },
+    "act2_ce125e8f": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true,
+        "properties": "thought"
     },
     "act2_d0aa8fa8": {
         "area": [
@@ -570,6 +787,24 @@
             315
         ],
         "properties": "thought"
+    },
+    "act2_d3b7e296": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
+    "act2_d45d1d6f": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
     },
     "act2_d5dd30f8": {
         "area": [
@@ -613,12 +848,45 @@
             90
         ]
     },
+    "act2_e11c64c2": {
+        "area": [
+            560,
+            720,
+            800,
+            270
+        ],
+        "clear_retain": true
+    },
     "act2_e1a93137": {
         "area": [
             80,
             135,
             640,
             225
+        ]
+    },
+    "act2_e2ea8eed": {
+        "area": [
+            560,
+            360,
+            800,
+            270
+        ]
+    },
+    "act2_e2ea8eed_1": {
+        "area": [
+            560,
+            360,
+            800,
+            270
+        ]
+    },
+    "act2_e2ea8eed_2": {
+        "area": [
+            960,
+            675,
+            480,
+            135
         ]
     },
     "act2_e6edc60a": {
@@ -648,6 +916,24 @@
         ],
         "clear_retain": true,
         "properties": "thought"
+    },
+    "act2_ecc7c5af": {
+        "area": [
+            1120,
+            90,
+            400,
+            135
+        ],
+        "clear_retain": false,
+        "properties": "thought"
+    },
+    "act2_ecd2c5d2": {
+        "area": [
+            560,
+            270,
+            240,
+            90
+        ]
     },
     "act2_ef854618": {
         "area": [
@@ -688,6 +974,22 @@
             80,
             270,
             640,
+            180
+        ]
+    },
+    "act2_f90356d5": {
+        "area": [
+            1200,
+            405,
+            480,
+            135
+        ]
+    },
+    "act2_fc485551": {
+        "area": [
+            80,
+            135,
+            560,
             180
         ]
     },

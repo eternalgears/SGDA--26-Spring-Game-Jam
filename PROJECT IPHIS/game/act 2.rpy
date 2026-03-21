@@ -15,7 +15,7 @@
 
     # clinic bg transition
     # show iphis sprite and ianthe sprite
-    play music "<volume 0.1>audio/whirr.wav" fadein 7.0
+    play music "<volume 0.2>audio/whirr.wav" fadein 7.0
     scene bg clinic at AnimatedAberate, VHS:
         zoom 1.4
     show black:
@@ -89,7 +89,9 @@
     hide iphis with Dissolve(1.0)
     with Pause(1.0)
     # transition to black
-    
+    scene black with Dissolve(1.0)
+    n "Click to continue. >>"
+    pause
     scene bg home at center2, AnimatedAberate, VHS:
         zoom 1.2
     with Fade(1.5, 1.0, 1.5)
@@ -101,19 +103,66 @@
     n "Androids are fully equipped to adapt to human logic. If the rules of the environment change, then so must the android's role."
     n "It is not foolish to believe that her deviancy may come soon."
     n bored "Because of this, I need to keep her sentience low for the sake of this project. She still has tasks to do, after all."
-
+    stop music fadeout 1.0
     # transition to operating table
-
+    scene black with Dissolve(1.0)
     # added more narrative here
-    
+    hide screen bubble with Dissolve(1.0)
+    with Pause(0.5)
+    n "Click to continue. >>"
+    pause
+    nvl clear
+    c "When I used to be a surgeon for humans, people showered me with praise."
+    c "I liked it. {w}\n\nUnlike now, where everything is bionic \nand artificial, I knew words could be genuine."
+    c "It's been long since I've felt the kindness of a human."
+    c "I wish I could go back to simplier times."
 
-    "IPHIS laid flat on the table once more. This time, the harsh light focused on her cranium."
-    "It would come that I would eventually review her controller core again, since it is a vital key to the final step of this project."
-    i "Iphis, shut your pain sensors off."
-    p "...Understood."
-    "There isn't a visual indication of the sensors turning off, but I trust her confirmation. {i}For that matter, if she was human, I would've given her anesthesia, but that's besides the point.{/i}"
-    "I opened a latch in her forehead using a small screwdriver. Making sure the cannula doesn't break and spill everywhere, I turn the connection off so that the blood through her brain rests."
-    # controller core (which looks similar to the human brain but with machinery) is visible
-    "{cps=100}<ERROR !! ALTERED STATE OF CONTROLLER CORE !! Report this bug to the database?>"
-    "It must be referring to the bionics being swapped in. These error messages don't take place whenever I put in bionics in other parts of her body, but for some reason, they only show up in the controller core."
-    "I press the red button to not report the ‘bug.'"
+    show iphis happy at center1, AnimatedAberate, VHS:
+        zoom 0.56
+    p "Good morning, Dr. Ianthe."
+    play music "<volume 5>audio/room noise.mp3" fadein 0.5
+    scene bg home at center2, AnimatedAberate, VHS:
+        zoom 1.2
+    with Dissolve(1.0)
+    show ianthe bored at ianthe1, AnimatedAberate, VHS
+    show iphis happy at center1, AnimatedAberate, VHS:
+        zoom 0.56
+    with Dissolve(0.5)
+    n "Unbeknownst to me, IPHIS had been waiting for me to wake up."
+    i "Hmmm? Ahh... {nw}"
+    show ianthe neutral at ianthe1, AnimatedAberate, VHS
+    i "Hmmm? Ahh... {fast}It really is early~"
+    i smile "What are you doing here, Iphis? It's unlike you."
+    p determined "...You appear to not have sufficent sleep."
+    p happy "Shall I prepare you a caffinated drink?"
+    n bored "Her thoughtful words, politeness, gentle smile..."
+    n "I despise people that perceive me like I am something that needs to be taken care of."
+    i neutral "Sigh..."
+    i smile "Uncharacteristically caring of you, hmmm?"
+    i neutral "How about you keep quiet while I take care of sorting out the stock?"
+    p scared "I..."
+    p speak"..Dr. Ianthe, if I may."
+    p determined "Though I am merely an antique android, I believe I deserve to be treated with respect."
+    p neutral "There will be no difficulties in our work if there isn't tension between us."
+    i scary "..."
+    i "You.."
+    play sound "audio/error.wav"
+    play music "<volume 0.8>act 2 demo.mp3" fadein 1.0
+    p scared "{cps=90}Urk...!{/cps}" with vpunch
+    n "I tugged on her cannula wire."
+    n "A little bit of blood seeps out, but not too much to where she could be put in critical condition."
+    n "Seeing her squirm helplessly over a simple tug, it makes me feel like I'm on top of the world."
+    i smile "I've always adored you when you were obedient."
+    play sound "audio/error.wav"
+    p "Eeek!" with vpunch
+    n "I pulled on the cannula a little harshly at that statement."
+    i neutral "We have an experiment coming up soon."
+    i smile "Be good for me, okay?"
+    with Pause(0.3)
+    stop music fadeout 1.0
+    scene black with Fade(1.5, 1.0, 1.5)
+    hide screen bubble
+    with Pause(0.5)
+    n "Click to continue. >>"
+    pause
+    jump act3
