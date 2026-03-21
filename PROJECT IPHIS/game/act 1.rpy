@@ -77,4 +77,4 @@ label contAct1:
     "This may be because during experiment #30 and experiment #31, I had made slight changes to her controller core by replacing parts of it with limbic and prefrontal bionics."
     "At those times, a persistent bug, possibly existing from her antique design, was taking up 10\% of her memory. A factory reset was in order for the affected areas, but even that was creating a runtime error."
     "I had to do what I had to do. It will not affect the project's success rate."
-    return
+    jump act3

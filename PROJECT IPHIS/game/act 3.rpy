@@ -12,44 +12,44 @@ label clean2:
     if FirstSplatter and SecondSplatter and ThirdFloorSplatter and FourthFloorSplatter:
         jump contAct3
     else:
-        call screen clean3_screen
+        call screen clean2_screen
 
-screen clean3_screen:
-    if not FirstFloorSplatter:
+screen clean2_screen:
+    if not FirstFloorSplatter: # come back to this one (rotation)
         imagebutton:
-            xpos 0.175
-            ypos 0.575
+            xpos 0.4653
+            ypos 0.65
             xanchor 0.5
             yanchor 0.5
-            idle "Table_Splatter_1.png"
-            hover "Table_Splatter_1.png"
-            action [SetVariable("FirstSplatter", True), Jump("clean1")]
+            idle "Floor_Splatter_1.png"
+            hover "Floor_Splatter_1.png"
+            action [SetVariable("FirstFloorSplatter", True), Jump("clean2")]
     if not SecondFloorSplatter:
         imagebutton:
-            xpos 0.245
-            ypos 0.63
+            xpos 0.63
+            ypos 0.282
             xanchor 0.5
             yanchor 0.5
-            idle "Table_Splatter_2.png"
-            hover "Table_Splatter_2.png"
-            action [SetVariable("SecondSplatter", True), Jump("clean1")]
+            idle "Floor_Splatter_2.png"
+            hover "Floor_Splatter_2.png"
+            action [SetVariable("SecondFloorSplatter", True), Jump("clean2")]
     if not ThirdFloorSplatter:
         imagebutton:
-            xpos 0.175
-            ypos 0.575
+            xpos 0.165
+            ypos 0.78
             xanchor 0.5
             yanchor 0.5
-            idle "Table_Splatter_1.png"
-            hover "Table_Splatter_1.png"
-            action [SetVariable("FirstSplatter", True), Jump("clean1")]
+            idle "Floor_Splatter_3.png"
+            hover "Floor_Splatter_3.png"
+            action [SetVariable("ThirdFloorSplatter", True), Jump("clean2")]
     if not FourthFloorSplatter:
         imagebutton:
-            xpos 0.245
-            ypos 0.63
+            xpos 0.81
+            ypos 0.655
             xanchor 0.5
             yanchor 0.5
-            idle "Table_Splatter_2.png"
-            hover "Table_Splatter_2.png"
-            action [SetVariable("SecondSplatter", True), Jump("clean1")]
+            idle "Floor_Splatter_4.png"
+            hover "Floor_Splatter_4.png"
+            action [SetVariable("FourthFloorSplatter", True), Jump("clean2")]
 
 label contAct3:
