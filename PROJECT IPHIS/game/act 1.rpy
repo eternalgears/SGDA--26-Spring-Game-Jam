@@ -17,17 +17,52 @@
     n "I can truly never get enough of it."
     hide screen bubble
     # change bg to operating table with blue blood
+
+
     scene bg lab at center2, AnimatedAberate, VHS with fade:
         zoom 1.35
     
     n "I prepare a fresh cleaning solution and start wiping away the android excess on the operating table."
     n "IPHIS is a special case, being an older nurse model. I can treat her with the utmost care, and she'll still find a way to bleed out."
     # possible code mechanic here where the player cleans the blood off the table?
-    label clean1:
-        #clean mechanic
+    jump clean1
+
+label clean1:
+    scene bg operating table
+
+    $ default_mouse = "towel"
+
+    default FirstSplatter = False
+    default SecondSplatter = False
+
+    if FirstSplatter and SecondSplatter:
         jump contAct1
+    else:
+        call screen clean1_screen
+
+screen clean1_screen:
+    if not FirstSplatter:
+        imagebutton:
+            xpos 0.175
+            ypos 0.575
+            xanchor 0.5
+            yanchor 0.5
+            idle "Table_Splatter_1.png"
+            hover "Table_Splatter_1.png"
+            action [SetVariable("FirstSplatter", True), Play("sound", "audio/btn_confirm.wav"), Jump("clean1")]
+    if not SecondSplatter:
+        imagebutton:
+            xpos 0.245
+            ypos 0.63
+            xanchor 0.5
+            yanchor 0.5
+            idle "Table_Splatter_2.png"
+            hover "Table_Splatter_2.png"
+            action [SetVariable("SecondSplatter", True), Play("sound", "audio/btn_confirm.wav"), Jump("clean1")]
 
 label contAct1:
+    $ default_mouse = "arrow"
+    stop sound
     scene bg lab at center2, AnimatedAberate, VHS:
         zoom 1.35
     show ianthe bored at ianthe1, AnimatedAberate, VHS

@@ -27,6 +27,7 @@ style gui_text:
 
 style button:
     properties gui.button_properties("button")
+    hover_sound "audio/iphis.wav"
 
 style button_text is gui_text:
     properties gui.text_properties("button")
@@ -107,11 +108,11 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
-        text what id "what" at textdissolve
+        text what id "what"
 
 
-    ## If there's a side image, display it above the text. Do not display on
-    ## the phone variant - there's no room.
+    ## If there's a side image, display it above the text. Do not display on the
+    ## phone variant - there's no room.
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
 
@@ -232,8 +233,8 @@ style choice_button_text is default:
 
 ## Quick Menu screen ###########################################################
 ##
-## The quick menu is displayed in-game to provide easy access to the out-of-
-## game menus.
+## The quick menu is displayed in-game to provide easy access to the out-of-game
+## menus.
 
 screen quick_menu():
 
@@ -297,19 +298,28 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        if main_menu:
+        default start_btn = _("Start")
+        default history_btn = _("History")
+        default save_btn = _("Save")
+        default load_btn = _("Load")
+        default pref_btn = _("Preferences")
+        default about_btn = _("About")
+        default help_btn = _("Help")
+        default main_menu_btn = _("Main Menu")
+        default quit_btn = _("Quit")
 
-            textbutton _("Start") action Start()
+        if main_menu:
+            textbutton start_btn hovered SetLocalVariable("start_btn", _("> Start")) unhovered SetLocalVariable("start_btn", _("Start")) action Start()
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton history_btn hovered SetLocalVariable("history_btn", _("> History")) unhovered SetLocalVariable("history_btn", _("History")) action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton save_btn hovered SetLocalVariable("save_btn", _("> Save")) unhovered SetLocalVariable("save_btn", _("Save")) action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton load_btn hovered SetLocalVariable("load_btn", _("> Load")) unhovered SetLocalVariable("load_btn", _("Load")) action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton pref_btn hovered SetLocalVariable("pref_btn", _("> Preferences")) unhovered SetLocalVariable("pref_btn", _("Preferences")) action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -317,31 +327,79 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton main_menu_btn hovered SetLocalVariable("main_menu_btn", _("> Main Menu")) unhovered SetLocalVariable("main_menu_btn", _("Main Menu")) action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        textbutton about_btn hovered SetLocalVariable("about_btn", _("> About")) unhovered SetLocalVariable("about_btn", _("About")) action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton help_btn hovered SetLocalVariable("help_btn", _("> Help")) unhovered SetLocalVariable("help_btn", _("Help")) action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton quit_btn hovered SetLocalVariable("quit_btn", _("> Quit")) unhovered SetLocalVariable("quit_btn", _("Quit")) action Quit(confirm=not main_menu)
 
+## Main Menu Navigation screen ##################################################
+##
+## Custom navigation menu to use for 
+## to other menus, and to start the game.
 
-style navigation_button is gui_button
-style navigation_button_text is gui_button_text
+screen main_menu_navigation():
 
-style navigation_button:
-    size_group "navigation"
-    properties gui.button_properties("navigation_button")
+    vbox:
+        style_prefix "navigation"
 
-style navigation_button_text:
-    properties gui.text_properties("navigation_button")
+        xpos gui.navigation_xpos
+        yalign 0.7
+
+        spacing gui.main_menu_navigation_spacing
+
+        default start_btn = _("Start")
+        default history_btn = _("History")
+        default save_btn = _("Save")
+        default load_btn = _("Load")
+        default pref_btn = _("Preferences")
+        default about_btn = _("About")
+        default help_btn = _("Help")
+        default main_menu_btn = _("Main Menu")
+        default quit_btn = _("Quit")
+
+        if main_menu:
+            textbutton start_btn hovered SetLocalVariable("start_btn", _("> Start")) unhovered SetLocalVariable("start_btn", _("Start")) action Start()
+
+        else:
+
+            textbutton history_btn hovered SetLocalVariable("history_btn", _("> History")) unhovered SetLocalVariable("history_btn", _("History")) action ShowMenu("history")
+
+            textbutton save_btn hovered SetLocalVariable("save_btn", _("> Save")) unhovered SetLocalVariable("save_btn", _("Save")) action ShowMenu("save")
+
+        textbutton load_btn hovered SetLocalVariable("load_btn", _("> Load")) unhovered SetLocalVariable("load_btn", _("Load")) action ShowMenu("load")
+
+        textbutton pref_btn hovered SetLocalVariable("pref_btn", _("> Preferences")) unhovered SetLocalVariable("pref_btn", _("Preferences")) action ShowMenu("preferences")
+
+        if _in_replay:
+
+            textbutton _("End Replay") action EndReplay(confirm=True)
+
+        elif not main_menu:
+
+            textbutton main_menu_btn hovered SetLocalVariable("main_menu_btn", _("> Main Menu")) unhovered SetLocalVariable("main_menu_btn", _("Main Menu")) action MainMenu()
+
+        textbutton about_btn hovered SetLocalVariable("about_btn", _("> About")) unhovered SetLocalVariable("about_btn", _("About")) action ShowMenu("about")
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            textbutton help_btn hovered SetLocalVariable("help_btn", _("> Help")) unhovered SetLocalVariable("help_btn", _("Help")) action ShowMenu("help")
+
+        if renpy.variant("pc"):
+
+            ## The quit button is banned on iOS and unnecessary on Android and
+            ## Web.
+            textbutton quit_btn hovered SetLocalVariable("quit_btn", _("> Quit")) unhovered SetLocalVariable("quit_btn", _("Quit")) action Quit(confirm=not main_menu)
 
 
 ## Main Menu screen ############################################################
@@ -363,7 +421,7 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    use main_menu_navigation
 
     if gui.show_name:
 
@@ -475,9 +533,12 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
     use navigation
 
-    textbutton _("Return"):
-        style "return_button"
+    default return_btn = "Return"
 
+    textbutton return_btn:
+        style "return_button"
+        hovered SetLocalVariable("return_btn", "> Return")
+        unhovered SetLocalVariable("return_btn", "Return")
         action Return()
 
     label title
@@ -524,11 +585,11 @@ style game_menu_side:
     spacing 15
 
 style game_menu_label:
-    xpos 75
+    xpos 55
     ysize 180
 
 style game_menu_label_text:
-    size gui.title_text_size
+    size 75
     color gui.accent_color
     yalign 0.5
 
@@ -552,7 +613,7 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
+    use game_menu(_("ABOUT"), scroll="viewport"):
 
         style_prefix "about"
 
@@ -568,7 +629,7 @@ screen about():
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
-style about_label is gui_label
+style about_label is gui_label_text
 style about_label_text is gui_label_text
 style about_text is gui_text
 
@@ -589,26 +650,26 @@ screen save():
 
     tag menu
 
-    use file_slots(_("Save"))
+    use file_slots(_("SAVE"))
 
 
 screen load():
 
     tag menu
 
-    use file_slots(_("Load"))
+    use file_slots(_("LOAD"))
 
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    default page_name_value = FilePageNameInputValue(pattern=_("PAGE {}"), auto=_("AUTOMATIC SAVES"), quick=_("QUICK SAVES"))
 
     use game_menu(title):
 
         fixed:
 
-            ## This ensures the input will get the enter event before any of
-            ## the buttons do.
+            ## This ensures the input will get the enter event before any of the
+            ## buttons do.
             order_reverse True
 
             ## The page name, which can be edited by clicking on a button.
@@ -643,7 +704,7 @@ screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_("empty slot")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):
@@ -725,8 +786,8 @@ style slot_button_text:
 
 ## Preferences screen ##########################################################
 ##
-## The preferences screen allows the player to configure the game to better
-## suit themselves.
+## The preferences screen allows the player to configure the game to better suit
+## themselves.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
@@ -734,7 +795,16 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    default window_btn = _("Window")
+    default fullscreen_btn = _("Fullscreen")
+
+    default unseen_text_btn = _("Unseen Text")
+    default after_choices_btn = _("After Choices")
+    default transitions_btn = _("Transitions")
+
+    default mute_all_btn = _("Mute All")
+
+    use game_menu(_("PREFERENCES"), scroll="viewport"):
 
         vbox:
 
@@ -745,19 +815,19 @@ screen preferences():
 
                     vbox:
                         style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                        label _("DISPLAY:")
+                        textbutton window_btn hovered SetLocalVariable("window_btn", _("> Window")) unhovered SetLocalVariable("window_btn", _("Window")) action Preference("display", "window")
+                        textbutton fullscreen_btn hovered SetLocalVariable("fullscreen_btn", _("> Fullscreen")) unhovered SetLocalVariable("fullscreen_btn", _("Fullscreen")) action Preference("display", "fullscreen")
 
                 vbox:
                     style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    label _("SKIP:")
+                    textbutton unseen_text_btn hovered SetLocalVariable("unseen_text_btn", _("> Unseen Text")) unhovered SetLocalVariable("unseen_text_btn", _("Unseen Text")) action Preference("skip", "toggle")
+                    textbutton after_choices_btn hovered SetLocalVariable("after_choices_btn", _("> After Choices")) unhovered SetLocalVariable("after_choices_btn", _("After Choices")) action Preference("after choices", "toggle")
+                    textbutton transitions_btn hovered SetLocalVariable("transitions_btn", _("> Transitions")) unhovered SetLocalVariable("transitions_btn", _("Transitions")) action InvertSelected(Preference("transitions", "toggle"))
 
-                ## Additional vboxes of type "radio_pref" or "check_pref" can
-                ## be added here, to add additional creator-defined preferences.
+                ## Additional vboxes of type "radio_pref" or "check_pref" can be
+                ## added here, to add additional creator-defined preferences.
 
             null height (4 * gui.pref_spacing)
 
@@ -767,25 +837,25 @@ screen preferences():
 
                 vbox:
 
-                    label _("Text Speed")
+                    label _("TEXT SPEED:")
 
                     bar value Preference("text speed")
 
-                    label _("Auto-Forward Time")
+                    label _("AUTO-FORWARD TIME:")
 
                     bar value Preference("auto-forward time")
 
                 vbox:
 
                     if config.has_music:
-                        label _("Music Volume")
+                        label _("MUSIC VOLUME:")
 
                         hbox:
                             bar value Preference("music volume")
 
                     if config.has_sound:
 
-                        label _("Sound Volume")
+                        label _("SOUND VOLUME:")
 
                         hbox:
                             bar value Preference("sound volume")
@@ -795,7 +865,7 @@ screen preferences():
 
 
                     if config.has_voice:
-                        label _("Voice Volume")
+                        label _("VOICE VOLUME:")
 
                         hbox:
                             bar value Preference("voice volume")
@@ -806,7 +876,9 @@ screen preferences():
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
-                        textbutton _("Mute All"):
+                        textbutton mute_all_btn:
+                            hovered SetLocalVariable("mute_all_btn", _("> Mute All"))
+                            unhovered SetLocalVariable("mute_all_btn", _("Mute All"))
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
@@ -897,7 +969,7 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+    use game_menu(_("HISTORY"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
 
         style_prefix "history"
 
@@ -910,13 +982,14 @@ screen history():
                     yfit True
 
                 if h.who:
+                    $ who = h.who + ":"
 
-                    label h.who:
+                    label who:
                         style "history_name"
                         substitute False
 
-                        ## Take the color of the who text from the Character,
-                        ## if set.
+                        ## Take the color of the who text from the Character, if
+                        ## set.
                         if "color" in h.who_args:
                             text_color h.who_args["color"]
 
@@ -984,20 +1057,24 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("Help"), scroll="viewport"):
+    use game_menu(_("HELP"), scroll="viewport"):
 
         style_prefix "help"
 
+        default keyboard_btn = _("Keyboard")
+        default mouse_btn = _("Mouse")
+        default gamepad_btn = _("Gamepad")
+        
         vbox:
             spacing 23
 
             hbox:
 
-                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
-                textbutton _("Mouse") action SetScreenVariable("device", "mouse")
+                textbutton keyboard_btn hovered SetLocalVariable("keyboard_btn", "> Keyboard") unhovered SetLocalVariable("keyboard_btn", "Keyboard") action SetScreenVariable("device", "keyboard")
+                textbutton mouse_btn hovered SetLocalVariable("mouse_btn", "> Mouse") unhovered SetLocalVariable("mouse_btn", "Mouse") action SetScreenVariable("device", "mouse")
 
                 if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
+                    textbutton gamepad_btn hovered SetLocalVariable("gamepad_btn", "> Gamepad") unhovered SetLocalVariable("gamepad_btn", "Gamepad") action SetScreenVariable("device", "gamepad")
 
             if device == "keyboard":
                 use keyboard_help
@@ -1107,7 +1184,8 @@ screen gamepad_help():
         label _("Y/Top Button")
         text _("Hides the user interface.")
 
-    textbutton _("Calibrate") action GamepadCalibrate()
+    default calibrate_btn = _("Calibrate")
+    textbutton calibrate_btn hovered SetLocalVariable("calibrate_btn", _("> Calibrate")) unhovered SetLocalVariable("calibrate_btn", _("Calibrate")) action GamepadCalibrate()
 
 
 style help_button is gui_button
@@ -1172,8 +1250,11 @@ screen confirm(message, yes_action, no_action):
                 xalign 0.5
                 spacing 150
 
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
+                default yes_btn = _("Yes")
+                default no_btn = _("No")
+
+                textbutton yes_btn hovered SetLocalVariable("yes_btn", "> Yes") unhovered SetLocalVariable("yes_btn", "Yes") action yes_action
+                textbutton no_btn hovered SetLocalVariable("no_btn", "> No") unhovered SetLocalVariable("no_btn", "No") action no_action
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action
@@ -1325,8 +1406,8 @@ screen nvl(dialogue, items=None):
 
             use nvl_dialogue(dialogue)
 
-        ## Displays the menu, if given. The menu may be displayed incorrectly
-        ## if config.narrator_menu is set to True.
+        ## Displays the menu, if given. The menu may be displayed incorrectly if
+        ## config.narrator_menu is set to True.
         for i in items:
 
             textbutton i.caption:
@@ -1355,8 +1436,8 @@ screen nvl_dialogue(dialogue):
                     id d.what_id
 
 
-## This controls the maximum number of NVL-mode entries that can be displayed
-## at once.
+## This controls the maximum number of NVL-mode entries that can be displayed at
+## once.
 define config.nvl_list_length = gui.nvl_list_length
 
 style nvl_window is default
@@ -1417,10 +1498,10 @@ style nvl_button_text:
 
 ## Bubble screen ###############################################################
 ##
-## The bubble screen is used to display dialogue to the player when using
-## speech bubbles. The bubble screen takes the same parameters as the say
-## screen, must create a displayable with the id of "what", and can create
-## displayables with the "namebox", "who", and "window" ids.
+## The bubble screen is used to display dialogue to the player when using speech
+## bubbles. The bubble screen takes the same parameters as the say screen, must
+## create a displayable with the id of "what", and can create displayables with
+## the "namebox", "who", and "window" ids.
 ##
 ## https://www.renpy.org/doc/html/bubble.html#bubble-screen
 
@@ -1440,7 +1521,7 @@ screen bubble(who, what):
                     id "who"
 
         text what:
-            id "what" at textdissolve
+            id "what"
 
         default ctc = None
         showif ctc:
