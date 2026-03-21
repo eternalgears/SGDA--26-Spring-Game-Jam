@@ -12,6 +12,8 @@
 label clean1:
     scene bg operating table
 
+    $ default_mouse = "towel"
+
     default FirstSplatter = False
     default SecondSplatter = False
 
@@ -29,7 +31,7 @@ screen clean1_screen:
             yanchor 0.5
             idle "Table_Splatter_1.png"
             hover "Table_Splatter_1.png"
-            action [SetVariable("FirstSplatter", True), Jump("clean1")]
+            action [SetVariable("FirstSplatter", True), Play("sound", "audio/btn_confirm.wav"), Jump("clean1")]
     if not SecondSplatter:
         imagebutton:
             xpos 0.245
@@ -38,9 +40,11 @@ screen clean1_screen:
             yanchor 0.5
             idle "Table_Splatter_2.png"
             hover "Table_Splatter_2.png"
-            action [SetVariable("SecondSplatter", True), Jump("clean1")]
+            action [SetVariable("SecondSplatter", True), Play("sound", "audio/btn_confirm.wav"), Jump("clean1")]
 
 label contAct1:
+    $ default_mouse = "arrow"
+    stop sound
     "...What a nuisance. At least there is an endless amount of android blood in the lab that I can restore her with."
     "After I'm done wiping, I change my gloves, spray with a different solution, and wipe again."
 

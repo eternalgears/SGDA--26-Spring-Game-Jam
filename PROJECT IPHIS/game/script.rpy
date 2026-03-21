@@ -67,9 +67,11 @@ image white = "#FFFFFF"
 
 image mouse arrow:
     "images/arrow2.png"
+image mouse towel:
+    "images/towel.png"
 
 # define all cursors
-define config.mouse_displayable = MouseDisplayable("images/arrow2.png", 0, 0)
+define config.mouse_displayable = MouseDisplayable("images/arrow2.png", 0, 0).add("towel", "mouse towel", 150.0, 0).add("arrow", "mouse arrow", 0, 0)
 
 #image side ianthe smile:
     #"images/ianthe smile.png"
