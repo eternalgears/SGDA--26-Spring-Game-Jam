@@ -65,7 +65,7 @@
     with Pause(5.0)
     # fade to black
     # transition back to scene
-    scene cyan with Dissolve(0.5)
+    scene cyan at AnimatedAberate, VHS with Dissolve(0.5)
     stop music fadeout 0.5
     n "When I opened my eyes, I was on the ground." 
     n "How unsatisfactory. The operating room could be brimming with unknown germs or diseases."
