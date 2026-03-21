@@ -71,8 +71,8 @@ label contAct1:
     show iphis neutral at center1, AnimatedAberate, VHS with Dissolve(0.5)
     hide iphis with Dissolve(1.0)
     n "IPHIS nods and walks off to her chamber. Her movements are unchanging in each step."
-    n "I watch her plug her cannula wire to the port. The blood gleams a bright neon blue in the dark, glistening upon her smooth exterior."
-    n "Like a constellation in the (artificial) night sky."
+    n "I watch her plug her cannula wire to the port. The tube gleams a bright neon blue in the dark, glistening upon her smooth exterior."
+    n "Like a moon in the (artificial) night sky."
 
     # pause then show
     play sound "audio/lightoff.wav"
@@ -97,6 +97,11 @@ label contAct1:
     i "...IPHIS's ever growing refusals to my questions have been increasing as of late."
     i "It almost borders on breaking the 2nd Law, had it not followed her usual logic."
     n "This may be because during experiment #30 and experiment #31, I had made slight changes to her controller core by replacing parts of it with limbic and prefrontal bionics."
-    n "At those times, a persistent bug, possibly existing from her antique design, was taking up 10\% of her memory. A factory reset was in order for the affected areas, but even that was creating a runtime error."
-    i bored "I had to do what I had to do. It will not affect the project's success rate."
-    return
+    n "In short, those bionics are known for regulating human emotion."
+    i bored "Sigh... What a troublesome thought."
+    i smile "I had to do what I had to do. It will not affect the project's success rate."
+    stop music fadeout 1.5
+    scene black with Dissolve(1.3)
+    with Pause(1.3)
+
+    jump act2

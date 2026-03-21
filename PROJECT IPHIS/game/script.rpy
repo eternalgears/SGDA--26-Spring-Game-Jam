@@ -61,6 +61,7 @@ define nn = Character(None, callback = type_sound)
 # center text
 define c = Character(None,
     kind=nvl,
+    callback = type_sound,
     window_background=None,
     what_style="centered_text",
     what_color="#fff",
@@ -105,13 +106,14 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
     with Pixellate(1.5, 5.0)
-    scene bg lab at center2, AnimatedAberate, VHS:
-        zoom 1.35
+    scene black
     ### ACT 1 ##
-
+    c "{b}ACT 1:{/b} PROJECT IPHIS\n{w}\"Bionic and organ.\""
+    scene bg clean at AnimatedAberate, VHS:
+        zoom 1.2
     nn "{cps=45}\"cout << \"|| PROJECT IPHIS ||\" << ‘\n' << \"log 35x\";{nw}{/cps}"
     "{cps=100}|| PROJECT IPHIS ||\nlog 35x{/cps}"
-    nn "logFile << \"IPHIS's #2aorta has successfully been replaced with a parallel aortic valve bionic.\";"
+    nn "{color=#5ce1e6}logFile << \"IPHIS's #2aorta has successfully been replaced with a parallel aortic valve bionic.\";{/color}"
     
     jump act1
 
