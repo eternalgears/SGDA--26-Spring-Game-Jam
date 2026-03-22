@@ -28,8 +28,7 @@
     jump clean1
 
 label clean1:
-    scene bg operating table
-
+    scene bg operating table with Dissolve(0.5)
     $ default_mouse = "towel"
 
     default FirstSplatter = False
@@ -63,7 +62,7 @@ screen clean1_screen:
 label contAct1:
     $ default_mouse = "arrow"
     stop sound
-    scene bg lab at center2, AnimatedAberate, VHS:
+    scene bg lab at center2, AnimatedAberate, VHS with Dissolve(0.5):
         zoom 1.35
     show ianthe bored at ianthe1, AnimatedAberate, VHS
     i "...What a nuisance. At least there is an endless amount of android blood in the lab that I can restore her with."
