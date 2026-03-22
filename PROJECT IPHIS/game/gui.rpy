@@ -75,7 +75,7 @@ define gui.name_text_size = 45
 define gui.interface_text_size = 40#33
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 42#36
+define gui.label_text_size = 38#36
 
 ## The size of text on the notify screen.
 define gui.notify_text_size = 24

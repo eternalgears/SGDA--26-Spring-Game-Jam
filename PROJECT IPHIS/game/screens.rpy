@@ -353,7 +353,7 @@ screen main_menu_navigation():
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.7
+        yalign 0.4
 
         spacing gui.main_menu_navigation_spacing
 
